@@ -1,12 +1,84 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  images: {
-    unoptimized: true,
-  },
-  // Replace 'cv' with your exact repository name if different
-  // Omit basePath if deploying to your user root page (YOUR_USERNAME.github.io)
-  basePath: process.env.NODE_ENV === 'production' ? '/cv' : '',
-};
 
-export default nextConfig;
+  // Enable React strict mode for better development experience
+  reactStrictMode: true,
+
+  // Optimize images
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+      },
+    ],
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 60,
+  },
+
+  // Compress output
+  compress: true,
+
+  // Headers for security and performance
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on'
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff'
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN'
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block'
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin'
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()'
+          }
+        ]
+      },
+      {
+        source: '/(.*).svg',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      {
+        source: '/(.*).png',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      }
+    ];
+  },
+
+
+  // Reduce bundle size by excluding source maps in production
+  productionBrowserSourceMaps: false,
+
+  // PoweredByHeader removes the X-Powered-By header
+  poweredByHeader: false,
+}
+
+module.exports = nextConfig
