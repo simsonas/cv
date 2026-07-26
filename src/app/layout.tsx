@@ -8,8 +8,10 @@ import type React from "react";
 import { ErrorBoundary } from "@/components/error-boundary";
 import { RESUME_DATA } from "@/data/resume-data";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cv.jarocki.me";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cv.jarocki.me"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: `${RESUME_DATA.name} - ${RESUME_DATA.about}`,
     template: `%s | ${RESUME_DATA.name}`,
@@ -37,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: RESUME_DATA.personalWebsiteUrl,
+    url: siteUrl,
     siteName: `${RESUME_DATA.name}'s CV`,
     title: `${RESUME_DATA.name} - ${RESUME_DATA.about}`,
     description: RESUME_DATA.about,
@@ -60,7 +62,7 @@ export const metadata: Metadata = {
     creator: "@BartoszJarocki",
   },
   alternates: {
-    canonical: RESUME_DATA.personalWebsiteUrl,
+    canonical: siteUrl,
   },
 };
 

@@ -2,7 +2,7 @@ name: Deploy Next.js to GitHub Pages
 
 on:
   push:
-    branches: ["main"] # Change to "master" if your default branch is named master
+    branches: ["main", "master"]
   workflow_dispatch:
 
 permissions:
@@ -13,6 +13,10 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
+
+env:
+  NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+  NEXT_PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
 
 jobs:
   build:
@@ -36,7 +40,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Build static site
         run: pnpm build

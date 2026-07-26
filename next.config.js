@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
+const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1];
+const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
+const basePath =
+  process.env.NEXT_PUBLIC_BASE_PATH ||
+  (isGitHubActions && repoName ? `/${repoName}` : '');
+const assetPrefix = basePath || undefined;
+
 const nextConfig = {
   // Required: Export static HTML/CSS/JS files to the ./out folder for GitHub Pages
   output: 'export',
@@ -14,9 +21,9 @@ const nextConfig = {
     ],
   },
 
-  // Required: Matches your GitHub repository name (https://<username>.github.io/cv/)
-  // Omit or set to '' if hosting on a custom domain or root site (<username>.github.io)
-  basePath: process.env.NODE_ENV === 'production' ? '/cv' : '',
+  // Match the GitHub Pages repository path when deploying from a repo site.
+  basePath,
+  assetPrefix,
 
   // Append trailing slashes to support static page routing on GitHub Pages
   trailingSlash: true,

@@ -9,6 +9,8 @@ import { Skills } from "./components/skills";
 import { Summary } from "./components/summary";
 import { WorkExperience } from "./components/work-experience";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cv.jarocki.me";
+
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} - Resume`,
   description: RESUME_DATA.about,
@@ -19,7 +21,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://cv.jarocki.me/opengraph-image",
+        url: `${siteUrl}/opengraph-image`,
         width: 1200,
         height: 630,
         alt: `${RESUME_DATA.name}'s profile picture`,
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${RESUME_DATA.name} - Resume`,
     description: RESUME_DATA.about,
-    images: ["https://cv.jarocki.me/opengraph-image"],
+    images: [`${siteUrl}/opengraph-image`],
   },
 };
 
