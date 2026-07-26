@@ -1,8 +1,8 @@
 import type { ResumeData } from "@/lib/types";
 
 export const RESUME_DATA: ResumeData = {
-  name: "Bartosz Jarocki",
-  initials: "BJ",
+  name: "Darius Simsonas",
+  initials: "DS",
   location: "Wrocław, Poland, CET",
   locationLink: "https://www.google.com/maps/place/Wrocław",
   about: "Full Stack Engineer building products from the ground up.",
