@@ -8,7 +8,7 @@ import type React from "react";
 import { ErrorBoundary } from "@/components/error-boundary";
 import { RESUME_DATA } from "@/data/resume-data";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cv.jarocki.me";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cv.simsonas.org";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

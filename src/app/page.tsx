@@ -9,7 +9,7 @@ import { Skills } from "./components/skills";
 import { Summary } from "./components/summary";
 import { WorkExperience } from "./components/work-experience";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cv.jarocki.me";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cv.simsonas.org";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} - Resume`,

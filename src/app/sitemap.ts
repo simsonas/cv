@@ -1,14 +1,13 @@
 import type { MetadataRoute } from "next";
-// Add these two lines at the top of src/app/sitemap.ts
 export const dynamic = "force-static";
 export const revalidate = false;
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://simsonas.github.io/cv";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cv.simsonas.org";
 
+export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: baseUrl,
+      url: siteUrl,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
