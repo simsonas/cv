@@ -1,9 +1,5 @@
 /** @type {import('next').NextConfig} */
-const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1];
-const isGitHubActions = process.env.GITHUB_ACTIONS === 'true';
-const basePath =
-  process.env.NEXT_PUBLIC_BASE_PATH ||
-  (isGitHubActions && repoName ? `/${repoName}` : '');
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 const assetPrefix = basePath || undefined;
 
 const nextConfig = {
