@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+  NEXT_PUBLIC_BASE_PATH: ""
   NEXT_PUBLIC_SITE_URL: https://cv.simsonas.org
 
 jobs:
