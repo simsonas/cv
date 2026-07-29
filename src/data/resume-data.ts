@@ -170,4 +170,12 @@ export const RESUME_DATA: ResumeData = {
       },
     },
   ],
+    certifications: [
+    {
+      name: "AWS Certified Developer - Associate",
+      issuer: "Amazon Web Services",
+      date: "2024",
+      link: "https://aws.amazon.com/certification/",
+    },
+  ],
 } as const;
