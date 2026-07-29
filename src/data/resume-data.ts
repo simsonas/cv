@@ -173,7 +173,7 @@ export const RESUME_DATA: ResumeData = {
   certifications: [
     {
       name: "AWS Certified Cloud Practitioner",
-      issuer: "Amazon Web Services",
+      url: "https://www.credly.com/badges/example",
       date: "2024",
     },
   ],

@@ -52,7 +52,7 @@ export interface ResumeData {
   }>;
   certifications?: Array<{
     name: string;
-    issuer: string;
+    url: string;
     date: string;
   }>;
 }

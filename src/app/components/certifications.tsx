@@ -1,4 +1,3 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
 import type { RESUME_DATA } from "@/data/resume-data";
 
@@ -10,32 +9,32 @@ interface CertificationsProps {
 
 export function Certifications({ certifications }: CertificationsProps) {
   return (
-    <Section>
+    <Section className="gap-y-2 print:gap-y-1">
       <h2 className="text-xl font-bold" id="certifications-section">
         Certifications
       </h2>
       <div
-        className="space-y-4"
+        className="space-y-2"
         role="feed"
         aria-labelledby="certifications-section"
       >
         {certifications.map((certification) => (
-          <article key={`${certification.name}-${certification.issuer}`}>
-            <Card className="border-none">
-              <CardHeader>
-                <div className="flex items-center justify-between gap-x-2 text-base">
-                  <h3 className="font-semibold leading-none">
-                    {certification.name}
-                  </h3>
-                  <div className="text-sm tabular-nums text-gray-500">
-                    {certification.date}
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent className="mt-2 text-foreground/80 print:text-[12px]">
-                {certification.issuer}
-              </CardContent>
-            </Card>
+          <article key={`${certification.name}-${certification.url}`}>
+            <div className="flex items-baseline justify-between gap-x-3 text-sm print:text-[12px]">
+              <h3 className="min-w-0 font-medium leading-none">
+                <a
+                  href={certification.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="truncate hover:underline"
+                >
+                  {certification.name}
+                </a>
+              </h3>
+              <div className="shrink-0 tabular-nums text-gray-500">
+                {certification.date}
+              </div>
+            </div>
           </article>
         ))}
       </div>
