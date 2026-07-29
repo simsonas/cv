@@ -109,16 +109,10 @@ export default function ResumePage() {
             >
               <Skills skills={RESUME_DATA.skills} />
             </div>
-            <div
-              className="animate-fade-in"
-              style={{ animationDelay: "375ms" }}
-            >
-              <Projects projects={RESUME_DATA.projects} />
-            </div>
             {RESUME_DATA.certifications?.length ? (
               <div
                 className="animate-fade-in"
-                style={{ animationDelay: "450ms" }}
+                style={{ animationDelay: "375ms" }}
               >
                 <Certifications certifications={RESUME_DATA.certifications} />
               </div>
