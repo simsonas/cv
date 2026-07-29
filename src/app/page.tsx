@@ -4,7 +4,7 @@ import { RESUME_DATA } from "@/data/resume-data";
 import { generateResumeStructuredData } from "@/lib/structured-data";
 import { Education } from "./components/education";
 import { Header } from "./components/header";
-import { Projects } from "./components/projects";
+// import { Projects } from "./components/projects";
 import { Certifications } from "./components/certifications";
 import { Skills } from "./components/skills";
 import { Summary } from "./components/summary";
