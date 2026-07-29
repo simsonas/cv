@@ -140,38 +140,38 @@ export const RESUME_DATA: ResumeData = {
     "System Architecture",
     "Remote Team Leadership",
   ],
-  projects: [
-    {
-      title: "Monito",
-      techStack: ["TypeScript", "Next.js", "AI", "Browser Extension"],
-      description: "Autonomous QA AI agent for web applications",
-      link: {
-        label: "monito.dev",
-        href: "https://monito.dev/",
-      },
-    },
-    {
-      title: "43frames",
-      techStack: ["TypeScript", "Next.js", "AI"],
-      description: "AI-powered image and video generation studio",
-      link: {
-        label: "43frames.com",
-        href: "https://43frames.com/",
-      },
-    },
-    {
-      title: "Minimalist CV",
-      techStack: ["TypeScript", "Next.js", "Tailwind CSS"],
-      description:
-        "Open source, print-friendly CV template. 9,600+ stars on GitHub",
-      link: {
-        label: "Minimalist CV",
-        href: "https://github.com/BartoszJarocki/cv",
-      },
-    },
-  ],
   certifications: [
     {
+      name: "AWS Certified Cloud Practitioner",
+      url: "https://www.credly.com/badges/example",
+      date: "2024",
+    },
+      {
+      name: "AWS Certified Cloud Practitioner",
+      url: "https://www.credly.com/badges/example",
+      date: "2024",
+    },
+      {
+      name: "AWS Certified Cloud Practitioner",
+      url: "https://www.credly.com/badges/example",
+      date: "2024",
+    },
+      {
+      name: "AWS Certified Cloud Practitioner",
+      url: "https://www.credly.com/badges/example",
+      date: "2024",
+    },
+      {
+      name: "AWS Certified Cloud Practitioner",
+      url: "https://www.credly.com/badges/example",
+      date: "2024",
+    },
+      {
+      name: "AWS Certified Cloud Practitioner",
+      url: "https://www.credly.com/badges/example",
+      date: "2024",
+    },
+      {
       name: "AWS Certified Cloud Practitioner",
       url: "https://www.credly.com/badges/example",
       date: "2024",
