@@ -5,6 +5,7 @@ import { generateResumeStructuredData } from "@/lib/structured-data";
 import { Education } from "./components/education";
 import { Header } from "./components/header";
 import { Projects } from "./components/projects";
+import { Certifications } from "./components/certifications";
 import { Skills } from "./components/skills";
 import { Summary } from "./components/summary";
 import { WorkExperience } from "./components/work-experience";
@@ -114,6 +115,14 @@ export default function ResumePage() {
             >
               <Projects projects={RESUME_DATA.projects} />
             </div>
+            {RESUME_DATA.certifications?.length ? (
+              <div
+                className="animate-fade-in"
+                style={{ animationDelay: "450ms" }}
+              >
+                <Certifications certifications={RESUME_DATA.certifications} />
+              </div>
+            ) : null}
           </div>
         </section>
 

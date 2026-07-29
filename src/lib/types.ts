@@ -50,4 +50,9 @@ export interface ResumeData {
       href: string;
     };
   }>;
+  certifications?: Array<{
+    name: string;
+    issuer: string;
+    date: string;
+  }>;
 }
