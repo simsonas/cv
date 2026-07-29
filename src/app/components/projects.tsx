@@ -120,6 +120,8 @@ interface ProjectsProps {
  * Section component displaying all side projects
  */
 export function Projects({ projects }: ProjectsProps) {
+  const items = projects ?? [];
+
   return (
     <Section className="scroll-mb-16 print:space-y-4">
       <h2 className="text-xl font-bold" id="side-projects">
@@ -130,7 +132,7 @@ export function Projects({ projects }: ProjectsProps) {
         role="feed"
         aria-labelledby="side-projects"
       >
-        {projects.map((project) => (
+        {items.map((project) => (
           <article
             key={project.title}
             className="h-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm print:hover:translate-y-0 print:hover:shadow-none"
