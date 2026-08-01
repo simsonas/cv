@@ -142,37 +142,37 @@ export const RESUME_DATA: ResumeData = {
   ],
   certifications: [
     {
-      name: "Microsoft Certified: Azure Solutions Architect Expert",
+      name: "Microsoft Azure Solutions Architect Expert",
       url: "https://learn.microsoft.com/en-us/users/dariussimsonas-9644/credentials/2287d4b183ea2ce4",
       date: "2022",
     },
       {
-      name: "Microsoft Certified: DevOps Engineer Expert",
+      name: "Microsoft DevOps Engineer Expert",
       url: "https://learn.microsoft.com/en-us/users/dariussimsonas-9644/credentials/a240b7cade3dc68b",
       date: "2026",
     },
       {
-      name: "Microsoft Certified: Fabric Data Engineer Associate",
+      name: "Microsoft Fabric Data Engineer Associate",
       url: "https://learn.microsoft.com/en-us/users/dariussimsonas-9644/credentials/eed2090f175a7871",
       date: "2025",
     },
       {
-      name: "Microsoft Certified: Azure Administrator Associate",
+      name: "Microsoft Azure Administrator Associate",
       url: "https://learn.microsoft.com/en-us/users/dariussimsonas-9644/credentials/e764d0e7ba35f1d0",
       date: "2022",
     },
       {
-      name: "Databricks Certified: Associate Developer for Apache Spark 3.0",
+      name: "Databricks Developer for Apache Spark 3.0",
       url: "https://credentials.databricks.com/ac02c3a1-378a-456d-985b-7aa9474cbe33#acc.OZnXqcvM",
       date: "2022",
     },
       {
-      name: "Microsoft Certified: Fabric Analytics Engineer Associate",
+      name: "Microsoft Fabric Analytics Engineer Associate",
       url: "https://learn.microsoft.com/en-us/users/dariussimsonas-9644/credentials/d81c9f261a3baf93",
       date: "2024",
     },
       {
-      name: "PCEP Certified Entry-Level Python Programmer",
+      name: "PCEP Python Programmer",
       url: "https://verify.openedg.org/?id=TYrz.qwnj.LSMn",
       date: "2025",
     },
