@@ -8,7 +8,7 @@ export const RESUME_DATA: ResumeData = {
   about: "Senior Data Engineer specializing in modern cloud data platforms.",
   summary:
     "Senior data engineer with 7+ years of experience in SQL, Python, and Azure cloud technologies. Experienced in designing, developing, and maintaining enterprise-scale data warehouse and lakehouse solutions. Strong focus on performance, reliability, and modern data platforms.",
-  avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
+  avatarUrl: "https://avatars.githubusercontent.com/u/8759354?&v=4",
   personalWebsiteUrl: "",
   contact: {
     email: "",
